@@ -64,6 +64,22 @@ public class PracticeTest {
 
         assertEquals(1, actual);
     }
+
+    @Test
+    void TestSecondLargestNumber(){
+        Map<Integer, Integer> Map = new HashMap<>();
+        Map.put(1,1);
+        Map.put(2,2);
+        Map.put(3,3);
+        Map.put(4,4);
+        Map.put(5,5);
+
+
+        int actual = Practice.SecondLargestNumber(Map);
+
+        assertEquals(4, actual);
+    }
+
 }
 
 

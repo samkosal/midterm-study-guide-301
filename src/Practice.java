@@ -66,6 +66,21 @@ public class Practice {
         return Math.abs(total);
     }
 
+    public static int SecondLargestNumber(Map<Integer, Integer> map) {
+        int secondbiggest = 0;
+        int biggest = 0;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            Integer val = entry.getValue();
+            if (val > biggest) {
+                secondbiggest = biggest;
+                biggest = val;
+            }
+            
+        }
+        
+        return secondbiggest;
+    }
+
 
 
     public static void main(String[] args) {
