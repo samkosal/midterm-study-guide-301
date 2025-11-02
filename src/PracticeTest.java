@@ -1,9 +1,15 @@
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
-
+    
     // TODO: Make more tests for maxDiff
     @Test
     void testMaxDiffPositiveAndNegative() {
@@ -20,7 +26,27 @@ public class PracticeTest {
     
 
     // TODO: Make tests for each problem you solve
-    
+    @Test
+    void TestLongestWordWithCharacter(){
+        ArrayList<String> stringList = new ArrayList<>(Arrays.asList("lebron", "lepookie", "lebronjames", "peenersdfsdfsd"));
+        String actual = Practice.LongestWordWithCharacter(stringList, 'l');
+
+        assertEquals("lebronjames", actual);
+    }
+
+    @Test
+    void TestCountWordsBetweenNM(){
+        Set<String> stringList = new HashSet<>();
+        stringList.add("Walter");
+        stringList.add("Jesse");
+        stringList.add("Skyler");
+        stringList.add("Mike");
+        stringList.add("Saul");
+
+        int actual = Practice.CountWordsBetweenNM(stringList, 4,6);
+
+        assertEquals(1, actual);
+    }
 }
 
 
