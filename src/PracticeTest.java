@@ -1,7 +1,9 @@
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashSet;
@@ -44,6 +46,21 @@ public class PracticeTest {
         stringList.add("Saul");
 
         int actual = Practice.CountWordsBetweenNM(stringList, 4,6);
+
+        assertEquals(1, actual);
+    }
+
+    @Test
+    void TestDifferenceOddEven(){
+        Map<Integer, String> Map = new HashMap<>();
+        Map.put(1,null);
+        Map.put(2,null);
+        Map.put(3,null);
+        Map.put(4,null);
+        Map.put(5,null);
+
+
+        int actual = Practice.DifferenceOddEven(Map);
 
         assertEquals(1, actual);
     }

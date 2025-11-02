@@ -1,6 +1,8 @@
 // import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -48,6 +50,20 @@ public class Practice {
             }
         }
         return count;
+    }
+
+    public static int DifferenceOddEven(Map<Integer, String> map) {
+        int total = 0;
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            Integer key = entry.getKey();
+            if (key % 2 == 0) {
+                total++;
+            } else {
+                total--;
+            }
+        }
+        
+        return Math.abs(total);
     }
 
 
